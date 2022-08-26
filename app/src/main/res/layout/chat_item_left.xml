@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="5dp"
+    android:layout_marginStart="5dp"
+    android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout_text"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_text_chat_left"
+            android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_text_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@android:color/black"
+                    android:layout_marginStart="10dp"
+                    android:text="this is text message"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout_image"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:visibility="gone"
+            android:orientation="vertical">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="5dp"
+                    android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/image_chat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/avatar"/>
+                </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_voice"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:background="@drawable/bg_layout_round"
+            android:backgroundTint="@android:color/white"
+            android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="-3dp"
+                    android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:id="@+id/btn_play_chat"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_baseline_play_circle_filled_24"
+                            android:clickable="false"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:visibility="visible"
+                            app:tint="@color/green" />
+
+                </RelativeLayout>
+                <View
+                    android:id="@+id/v_length"
+                    android:layout_width="match_parent"
+                    android:layout_marginEnd="15dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@android:color/black" />
+                <Chronometer
+                    android:id="@+id/tv_duration"
+                    android:visibility="gone"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:text="01:00"
+                    android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/feeling"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:visibility="gone"
+        android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+            app:layout_constraintTop_toTopOf="@+id/linearLayout2"
+            app:srcCompat="@drawable/ic_fb_love" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:background="@drawable/bg_text_chat_left"
+            android:layout_marginBottom="5dp"
+            android:textColor="@android:color/black"
+            android:text="12:00am"/>
+
+</LinearLayout>

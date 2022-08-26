@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_search"
+        android:icon="@drawable/ic_search"
+        android:title="Search"
+        app:showAsAction="always"/>
+    <group
+        android:id="@+id/action_more"
+        >
+    <item
+        android:id="@+id/action_new_group"
+        android:title="New Group"
+       />
+      <item
+          android:id="@+id/action_new_broadcast"
+          android:title="New Broadcast"/>
+        <item
+            android:id="@+id/action_slink_web"
+            android:title="Slink Web"/>
+        <item
+            android:id="@+id/action_starred_message"
+            android:title="Starred Message"/>
+        <item
+            android:id="@+id/action_settings"
+            android:title="Settings"/>
+    </group>
+</menu>
